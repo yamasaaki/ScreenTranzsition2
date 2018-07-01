@@ -101,11 +101,11 @@
 			children = (
 				5179C1C820E8597800884E69 /* AppDelegate.swift */,
 				5179C1CA20E8597800884E69 /* FirstViewController.swift */,
+				5179C1F620E8636700884E69 /* SecoundViewController.swift */,
 				5179C1CC20E8597800884E69 /* Main.storyboard */,
 				5179C1CF20E8597B00884E69 /* Assets.xcassets */,
 				5179C1D120E8597B00884E69 /* LaunchScreen.storyboard */,
 				5179C1D420E8597B00884E69 /* Info.plist */,
-				5179C1F620E8636700884E69 /* SecoundViewController.swift */,
 			);
 			path = ScreenTranzsition;
 			sourceTree = "<group>";

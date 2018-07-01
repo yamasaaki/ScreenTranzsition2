@@ -13,7 +13,7 @@
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="OneView" id="BYZ-38-t0r" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OneView" id="BYZ-38-t0r" customClass="FirstViewController" customModule="ScreenTranzsition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,9 +29,20 @@
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-ki-IK3">
+                                <rect key="frame" x="16" y="575" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="tapMenuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYh-x6-iWb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gTi-6W-CxI" firstAttribute="top" secondItem="Uwo-ki-IK3" secondAttribute="bottom" constant="16" id="18o-GX-8qj"/>
+                            <constraint firstItem="Uwo-ki-IK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Ol-G3-wV9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uwo-ki-IK3" secondAttribute="trailing" constant="16" id="786-eK-05c"/>
                             <constraint firstItem="gTi-6W-CxI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Tb-GQ-aVH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gTi-6W-CxI" secondAttribute="bottom" constant="16" id="F2H-lH-TRJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTi-6W-CxI" secondAttribute="trailing" constant="16" id="JUe-iI-zKF"/>
@@ -40,7 +51,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jgR-ZW-C8V"/>
+                    <navigationItem key="navigationItem" id="jgR-ZW-C8V">
+                        <barButtonItem key="rightBarButtonItem" title="三" id="fBg-sk-pfr"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +90,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2b-eO-nX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="250" y="134"/>
         </scene>
     </scenes>
 </document>
