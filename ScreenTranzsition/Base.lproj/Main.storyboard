@@ -10,10 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="yRQ-vW-Piw">
+            <objects>
+                <viewController storyboardIdentifier="menuView" id="pzc-tT-E8j" customClass="MenuViewController" customModule="ScreenTranzsition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZbE-dc-LJq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-Br-Hxp">
+                                <rect key="frame" x="16" y="36" width="343" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD2-E9-bum">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="1"/>
+                                        <connections>
+                                            <action selector="tapOneButton:" destination="pzc-tT-E8j" eventType="touchUpInside" id="pm6-VI-kEt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj5-an-bgo">
+                                        <rect key="frame" x="0.0" y="34" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="2"/>
+                                        <connections>
+                                            <action selector="tapTwoButton:" destination="pzc-tT-E8j" eventType="touchUpInside" id="gF7-Oy-PmF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24y-13-zq3">
+                                        <rect key="frame" x="0.0" y="68" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="3"/>
+                                        <connections>
+                                            <action selector="tapThreeButton:" destination="pzc-tT-E8j" eventType="touchUpInside" id="ipC-9J-sa8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fpu-Br-Hxp" firstAttribute="leading" secondItem="CZ8-OS-lGR" secondAttribute="leading" constant="16" id="11r-Nn-9qe"/>
+                            <constraint firstItem="CZ8-OS-lGR" firstAttribute="trailing" secondItem="fpu-Br-Hxp" secondAttribute="trailing" constant="16" id="2Jh-cI-RmT"/>
+                            <constraint firstItem="fpu-Br-Hxp" firstAttribute="top" secondItem="CZ8-OS-lGR" secondAttribute="top" constant="16" id="TJT-ub-Ihd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CZ8-OS-lGR"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="KD2-E9-bum" id="if6-kU-5Eu"/>
+                        <outlet property="button2" destination="yj5-an-bgo" id="qry-ts-1U7"/>
+                        <outlet property="button3" destination="24y-13-zq3" id="XHB-Dg-aoc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aB5-gf-Zlk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="808"/>
+        </scene>
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="OneView" id="BYZ-38-t0r" customClass="FirstViewController" customModule="ScreenTranzsition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="oneView" id="BYZ-38-t0r" customClass="FirstViewController" customModule="ScreenTranzsition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,26 +84,35 @@
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapTestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBK-qK-pAp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-ki-IK3">
-                                <rect key="frame" x="16" y="575" width="343" height="30"/>
+                                <rect key="frame" x="329" y="80" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="f2P-wy-3eo"/>
+                                    <constraint firstAttribute="height" constant="30" id="qMJ-C8-SJa"/>
+                                </constraints>
                                 <state key="normal" title="Menu"/>
                                 <connections>
                                     <action selector="tapMenuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYh-x6-iWb"/>
+                                    <segue destination="pzc-tT-E8j" kind="popoverPresentation" popoverAnchorView="Uwo-ki-IK3" id="FSj-zD-pBb">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21821870300000001" green="0.76574620250000003" blue="0.85823074489999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gTi-6W-CxI" firstAttribute="top" secondItem="Uwo-ki-IK3" secondAttribute="bottom" constant="16" id="18o-GX-8qj"/>
-                            <constraint firstItem="Uwo-ki-IK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Ol-G3-wV9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uwo-ki-IK3" secondAttribute="trailing" constant="16" id="786-eK-05c"/>
                             <constraint firstItem="gTi-6W-CxI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Tb-GQ-aVH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gTi-6W-CxI" secondAttribute="bottom" constant="16" id="F2H-lH-TRJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTi-6W-CxI" secondAttribute="trailing" constant="16" id="JUe-iI-zKF"/>
                             <constraint firstItem="jBS-4a-o31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MhW-Qx-gfa"/>
                             <constraint firstItem="jBS-4a-o31" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rho-c7-kRf"/>
+                            <constraint firstItem="Uwo-ki-IK3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="WvM-Ts-jeC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -59,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Secound View Controller-->
         <scene sceneID="LoP-8g-AQX">
             <objects>
-                <viewController storyboardIdentifier="twoView" id="Knb-MC-lWn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="twoView" id="Knb-MC-lWn" customClass="SecoundViewController" customModule="ScreenTranzsition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B6h-aj-sjZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,11 +138,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0W-mH-kep">
+                                <rect key="frame" x="320" y="36" width="39" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.97062359909999996" blue="0.23670442289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="5Nn-j5-ik5"/>
+                                    <constraint firstAttribute="height" constant="30" id="Cfp-4B-XIK"/>
+                                </constraints>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="tapMenu:" destination="Knb-MC-lWn" eventType="touchUpInside" id="CLy-d9-cXn"/>
+                                    <segue destination="pzc-tT-E8j" kind="popoverPresentation" popoverAnchorView="J0W-mH-kep" id="rxX-F6-qYX">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.43963956679999999" green="1" blue="0.36351308139999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="o11-mZ-ANk" firstAttribute="centerY" secondItem="B6h-aj-sjZ" secondAttribute="centerY" id="8d6-bI-wd6"/>
                             <constraint firstItem="o11-mZ-ANk" firstAttribute="centerX" secondItem="B6h-aj-sjZ" secondAttribute="centerX" id="TUy-A4-igm"/>
+                            <constraint firstItem="R9a-c7-pgE" firstAttribute="trailing" secondItem="J0W-mH-kep" secondAttribute="trailing" constant="16" id="ZvN-9c-WeU"/>
+                            <constraint firstItem="J0W-mH-kep" firstAttribute="top" secondItem="R9a-c7-pgE" secondAttribute="top" constant="16" id="l6w-Gv-bHA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R9a-c7-pgE"/>
                     </view>
@@ -100,11 +182,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZo-P8-ooo">
+                                <rect key="frame" x="320" y="36" width="39" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.97062359909999996" blue="0.23670442289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="tapMenu:" destination="Gna-17-t1l" eventType="touchUpInside" id="W6C-Ed-XFU"/>
+                                    <segue destination="pzc-tT-E8j" kind="popoverPresentation" popoverAnchorView="SZo-P8-ooo" id="QW2-uU-dgd">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2Q5-rQ-18e" firstAttribute="centerX" secondItem="y7e-h4-CWN" secondAttribute="centerX" id="0yw-l5-pHw"/>
                             <constraint firstItem="2Q5-rQ-18e" firstAttribute="centerY" secondItem="y7e-h4-CWN" secondAttribute="centerY" id="2LC-Xs-Fzc"/>
+                            <constraint firstItem="si9-wB-epi" firstAttribute="trailing" secondItem="SZo-P8-ooo" secondAttribute="trailing" constant="16" id="GqS-0F-67U"/>
+                            <constraint firstItem="SZo-P8-ooo" firstAttribute="top" secondItem="si9-wB-epi" secondAttribute="top" constant="16" id="Vd0-l7-Clp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="si9-wB-epi"/>
                     </view>
@@ -132,4 +227,7 @@
             <point key="canvasLocation" x="250" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QW2-uU-dgd"/>
+    </inferredMetricsTieBreakers>
 </document>
