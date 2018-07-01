@@ -62,11 +62,23 @@
         <!--View Controller-->
         <scene sceneID="LoP-8g-AQX">
             <objects>
-                <viewController storyboardIdentifier="towView" id="Knb-MC-lWn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="twoView" id="Knb-MC-lWn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B6h-aj-sjZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o11-mZ-ANk">
+                                <rect key="frame" x="182.5" y="323" width="10" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o11-mZ-ANk" firstAttribute="centerY" secondItem="B6h-aj-sjZ" secondAttribute="centerY" id="8d6-bI-wd6"/>
+                            <constraint firstItem="o11-mZ-ANk" firstAttribute="centerX" secondItem="B6h-aj-sjZ" secondAttribute="centerX" id="TUy-A4-igm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R9a-c7-pgE"/>
                     </view>
                 </viewController>
