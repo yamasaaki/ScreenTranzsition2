@@ -18,7 +18,7 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
     private var myTableView: UITableView!
     
     private let menuHeight = 100
-    private let menuWidth = 100
+    private let menuWidth = 300
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +47,6 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         // Viewに追加する.
         myView.addSubview(myTableView)
         
-
-        
         // myViewの背景を緑色に設定.
         myView.backgroundColor = UIColor.green
         
@@ -56,8 +54,9 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
 //        myView.alpha = 0.5
         
         // 位置を中心に設定.
-        myView.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-        
+//        myView.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
+        myView.layer.position = CGPoint(x: self.view.frame.width/2, y: 100)
+
         
         // myViewを非表示.
         myView.isHidden = true
@@ -105,6 +104,17 @@ class FirstViewController: UIViewController , UITableViewDelegate, UITableViewDa
         print("Num: \(indexPath.row)")
         print("Value: \(myItems[indexPath.row])")
         
+        if (indexPath.row == 0) {
+            
+        } else if (indexPath.row == 1) {
+            // 画面遷移
+            let next: UIViewController = storyboard!.instantiateViewController(withIdentifier: "twoView")
+            present(next, animated: true, completion: nil)
+
+        } else if (indexPath.row == 2) {
+            let next: UIViewController = storyboard!.instantiateViewController(withIdentifier: "threeView")
+            present(next, animated: true, completion: nil)
+        }
         // 画面遷移
 //        let next: UIViewController = storyboard!.instantiateViewController(withIdentifier: "twoView")
 //        present(next, animated: true, completion: nil)

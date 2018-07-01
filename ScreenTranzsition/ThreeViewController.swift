@@ -1,5 +1,5 @@
 //
-//  SecoundViewController.swift
+//  ThreeViewController.swift
 //  ScreenTranzsition
 //
 //  Created by Yamada Masaaki on 2018/07/01.
@@ -7,9 +7,10 @@
 //
 
 import Foundation
+
 import UIKit
 
-class SecoundViewController: UIViewController {
+class ThreeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,4 +27,3 @@ class SecoundViewController: UIViewController {
     }
     
 }
-
